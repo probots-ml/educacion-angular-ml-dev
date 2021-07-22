@@ -1,0 +1,163 @@
+<app-toolbar [paginaActual]="paginaActual"></app-toolbar>
+<!--
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Primeros pasos</h1>
+            <p class="lead">Lleguemos a tu primera programación con tu kit</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-header">
+                {{datos.header}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{datos.title}}</h5>
+                <div class="image" *ngIf="datos.image">
+                    <img [src]="datos.image" alt="" srcset="" class="img-fluid">
+                </div>
+                <p class="card-text">{{datos.description}}</p>
+                
+                <div class="form-check" *ngFor="let opcion of datos.alternativas">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optradio"
+                        (click)="cambiarOpcion(opcion)">{{opcion.nombre}}
+                    </label>
+                </div>
+                
+                <div class="btn btn-primary" *ngIf="datos.button" (click)="download(datos.button)">Descargar</div>
+                <div class="btn btn-primary" *ngIf="datos.button2" (click)="download(datos.button2)">Ir al editor</div>
+            </div>
+            <div class="card-footer text-muted">
+                
+            <div class="btn btn-primary mx-1" *ngIf='datos.textButton1.length > 0' (click)='back()'>
+                {{datos.textButton1}}
+            </div>
+            <div class="btn btn-primary mx-1" *ngIf='datos.textButton2.length > 0' (click)='next()'>
+                {{datos.textButton2}}
+            </div>
+            <div class="btn btn-primary mx-1" *ngIf='datos.textButton3' (click)='goto(datos.textButton3Link)'>
+                {{datos.textButton3}}
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1 text-center" style="margin-top: 10px; margin-bottom: 10px;">
+            <h3><strong>Primeros pasos</strong></h3>
+            <h5>Lleguemos a la primer programación con su kit</h5>
+        </div>
+    </div>
+    <h3></h3>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+
+            <div class="container">
+                <div class="card text-center">
+
+                    <div class="card-header">
+                        {{datosActual.cabecera}}
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" style="min-height: 35px;">
+                            <h5 class="card-title">{{datosActual.titulo}}</h5>
+                        </li>
+                        <li class="list-group-item" style="min-height: 300px;">
+
+                            <div class="image" *ngIf="datosActual.imagen">
+                                <img [src]="datosActual.imagen" data-toggle="modal" data-target="#modalImagenes"
+                                    style="cursor: pointer;" alt="" srcset="" width="200" height="200"
+                                    class="img-fluid">
+                            </div>
+                            <p class="row col-md-10 offset-md-1 card-text text-justify">
+                                {{datosActual.descripcion}}
+                            </p>
+                        </li>
+                        <li class="list-group-item" style="min-height: 150px;">
+
+                            <div class="text-center">
+                                <div class="form-check" *ngFor="let opcion of datosActual.hijos">
+                                    <label class="row col-md-10 offset-md-1 form-check-label">
+                                        <input type="radio" class="form-check-input" name="optradio"
+                                            (click)="clickOpcion(opcion.id)">{{opcion.descripcion}}
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--
+
+                        <div class="card-body" style="height: 500px;">
+                            <h5 class="card-title">{{datosActual.titulo}}</h5>
+                            <div class="image" *ngIf="datosActual.imagen" data-toggle="modal" data-target="#modalImagenes"
+                            style="cursor: pointer;">
+                            <img [src]="datosActual.imagen" alt="" srcset="" width="200" height="200" class="img-fluid">
+                        </div>
+                        <p class="row col-md-10 offset-md-1 card-text text-justify" style="height: 100px;">
+                            {{datosActual.descripcion}}
+                        </p>
+                        
+                        <div class="text-center">
+                            <div class="form-check" *ngFor="let opcion of datosActual.hijos">
+                                <label class="row col-md-10 offset-md-1 form-check-label">
+                                    <input type="radio" class="form-check-input" name="optradio"
+                                    (click)="clickOpcion(opcion.id)">{{opcion.descripcion}}
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                -->
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="btn btn-secondary mx-1 align-self-start col-md-2 disabled"
+                                *ngIf='!tieneAnterior()'>Atrás</div>
+                            <div class="btn btn-primary mx-1 col-md-2 align-self-start" *ngIf='tieneAnterior()'
+                                (click)='back()'>
+                                Atrás
+                            </div>
+                            <div class="btn btn-secondary mx-1 align-self-start col-md-4 disabled"
+                                *ngIf='!tieneEnlace()'>&nbsp;</div>
+                            <div class="btn btn-primary mx-1 col-md-4 align-self-center" *ngIf='tieneEnlace()'
+                                (click)='goto(datosActual.enlace.enlace)'>
+                                {{datosActual.enlace.descripcion}}
+                            </div>
+                            <div class="btn btn-primary mx-1 align-self-start col-md-2" *ngIf='!tieneSiguiente()'
+                                (click)='volver_inicio()'>Volver a inicio</div>
+                            <div class="btn btn-primary mx-1 col-md-2 align-self-end" *ngIf='tieneSiguiente()'
+                                (click)='next()'>
+                                Siguiente
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalImagenes" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: rgba(0, 0, 0, 0.128);">
+            <button type="button" class="close ml-auto btn btn-danger mt-auto" data-dismiss="modal" aria-label="Close"
+                style="color: white;">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row justify-content-md-center" *ngIf="datosActual.imagen">
+                        <img [src]="datosActual.imagen" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

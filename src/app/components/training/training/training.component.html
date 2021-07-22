@@ -1,0 +1,676 @@
+<app-toolbar [paginaActual]="paginaActual"></app-toolbar>
+
+<style>
+    .med-tab-instituciones {
+        background-image: url('../../../../assets/image-training/training-001.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .med-tab-personas {
+        background-image: url('../../../../assets/image-training/training-002.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .med-tab-titulo {
+        background-color: rgba(255, 255, 255, 0.8);
+        min-height: 50px;
+    }
+
+    .med-media-body :is(table) {
+        background-color: rgba(255, 255, 255, 0.8);
+        font-size: 12pt;
+        font-weight: 550;
+    }
+
+    .med-transparent {
+        background-color: transparent;
+    }
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 h2 mt-3">Capacitaciones</div>
+    </div>
+    <ul class="nav nav-tabs mt-4" id="capacitaciones_tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="instituciones-tab" data-toggle="tab" href="#instituciones" role="tab"
+                aria-controls="instituciones" aria-selected="true">Instituciones</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="personas-tab" data-toggle="tab" href="#personas" role="tab" aria-controls="personas"
+                aria-selected="false">Personas</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="capacitacines_tab_content">
+        <div class="tab-pane fade show active" id="instituciones" role="tabpanel" aria-labelledby="instituciones-tab">
+            <div class="container med-tab-instituciones my-4 py-4">
+                <div class="row">
+                    <div class="h2 col-md-12 med-tab-titulo mx-auto text-center py-3">
+                        <strong>
+                            Programación y Robótica para Instituciones Educativas
+                        </strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="h2 col-md-9 med-media-body mx-auto offset-md-1">
+                        <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Resumen</th>
+                                <td>
+                                    Desarrollado para aplicar los conceptos obtenidos, en este trayecto, rápidamente
+                                    en sus aulas de manera presencial como también la remota.
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Temario</th>
+                                <td>
+                                    <ul class="med-transparent">
+                                        <li class="med-transparent">Módulo 1 - Introducción a la Lógica, la programación y la robótica</li>
+                                        <li class="med-transparent">Módulo 2 - Lenguajes de programación</li>
+                                        <li class="med-transparent">Módulo 3 - Robótica</li>
+                                        <li class="med-transparent">Módulo 4 - Robótica aplicada</li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Precio</th>
+                                <td>
+                                    $5000 por persona (grupal de 4 a 10 personas)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Medios de pago</th>
+                                <td>
+                                    <p>Depósito / Transferencia bancaria</p>
+                                <p>Tarjeta de débito y crédito</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="h2 col-md-12 med-media-body mx-auto">
+                                <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                    href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_y_Robotica_-_Instituciones_Educativas.pdf'
+                                    target='_blank'>
+                                    Ver presentación
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="h2 col-md-12 med-media-body mx-auto offset-md-6">
+                                <a type="button" class="btn btn-success btn-lm btn-block" role="button"
+                                        data-toggle="modal" data-target="#exampleModal"
+                                        href='#' target="_blank">
+                                        Anotarme
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="personas" role="tabpanel" aria-labelledby="personas-tab">
+            <div class="container med-tab-personas my-4 py-4">
+                <div class="row">
+                    <div class="h2 col-md-12 med-tab-titulo mx-auto text-center py-3">
+                        <strong>
+                            Programación y Robótica para consumidores finales
+                        </strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="h2 col-md-9 med-media-body mx-auto offset-md-1">
+                        <table class="table table-striped">
+                            <tbody>
+                              <tr>
+                                <th scope="row">Resumen</th>
+                                <td>
+                                    <p>
+                                        El curso Programación Inicial para consumidores finales está basada
+                                        en la
+                                        adquisición de conocimientos básico de la programación general
+                                        haciendo foco
+                                        en la lógica computacional y los primeros saberes que toda persona
+                                        debería
+                                        tener para poder aplicarlo a la robótica.
+                                    </p>
+                                    <p>
+                                        Si nunca ha tenido conocimientos previos de programación y no sabe
+                                        por donde
+                                        empezar, éste es el curso ideal. Aprenderá, de forma lúdica, varios
+                                        conceptos fundamentales que son necesarios para programar cualquier
+                                        robot.
+                                        Ideal tanto para niños como para adultos que recién comienzan en el
+                                        mundo de
+                                        la programación
+                                    </p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Temario</th>
+                                <td>
+                                
+                                    <ul class="med-transparent">
+                                        <li class="med-transparent">Módulo 1 - Introducción a la Lógica</li>
+                                        <li class="med-transparent">Módulo 2 - Pprogramación</li>
+                                        <li class="med-transparent">Módulo 3 - mBlock</li>
+                                        <li class="med-transparent">Módulo 4 - Robótica</li>
+                                    </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Precio</th>
+                                <td>
+                                    Precio: $3000 (grupal)
+                                </td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Medios de pago</th>
+                                <td>
+                                    <p>Depósito / Transferencia bancaria</p>
+                                <p>Tarjeta de débito y crédito</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="h2 col-md-12 med-media-body mx-auto">
+                                <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_inicial_-_Consumidor_Final.pdf'
+                                target='_blank'>
+                                Ver presentación
+                            </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="h2 col-md-12 med-media-body mx-auto offset-md-6">
+                                <a type="button" class="btn btn-success btn-lm btn-block" role="button"
+                                        data-toggle="modal" data-target="#exampleModal"
+                                        href='#' target="_blank">
+                                        Anotarme
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="container" *ngIf="tipoDeCliente.length == 0" hidden>
+    <div class="display-4 mt-5 mb-5">Elija el tipo de acceso</div>
+    <div class="card-deck mt-5">
+        <div class="card btn btn-light">
+            <!--(click)="tipoDeCliente = 'Instituciones'"-->
+            <img src="../../../../assets/image-training/training-001.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Instituciones</h5>
+                <p class="card-text">Capacitación al personal de la institución.</p>
+            </div>
+        </div>
+        <div class="card btn btn-light" (click)="tipoDeCliente = 'Personas'">
+            <img src="../../../../assets/image-training/training-002.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Persona</h5>
+                <p class="card-text">Capacitación a consumidores finales.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="tipoDeCliente.length > 0">
+    <div class="btn" (click)="tipoDeCliente = ''">
+        <img src="../../../../assets/icons/svg/chevron-left.svg" height="20px" width="20px" alt="" srcset="">
+        Atrás
+    </div>
+    <div class="card card-body mt-4 mb-4">
+        <div class="h2 mb-2">Capacitaciones para {{tipoDeCliente}}</div>
+        <ul class="list-group list-group-flush mt-2" *ngIf="tipoDeCliente == 'Instituciones'">
+            <li class="list-group-item">
+                <div class="media">
+                    <img src="..." class="mr-3" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Marcos formativos</h5>
+
+                        <p>Programación y Robótica para Instituciones Educativas</p>
+                        <p>
+                            <strong>Precio: $5000 por persona (grupal de 4 a 10 personas)</strong>
+                        </p>
+                        <div class="accordion" id="accordionExample">
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Resumen
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Desarrollado para aplicar los conceptos obtenidos, en este trayecto, rápidamente
+                                        en sus aulas de manera presencial como también la remota.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#temario" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Temario
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="temario" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Módulo 1 - Introducción a la Lógica, la programación y la robótica</li>
+                                            <li>Módulo 2 - Lenguajes de programación</li>
+                                            <li>Módulo 3 - Robótica</li>
+                                            <li>Módulo 4 - Robótica aplicada</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#formaDePago" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Formas de pago
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="formaDePago" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#formaDePago">
+                                    <div class="card-body">
+                                        <p>Depósito / Transferencia bancaria</p>
+                                        <p>Tarjeta de débito y crédito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_y_Robotica_-_Instituciones_Educativas.pdf'
+                                target='_blank'>
+                                Ver presentación
+                            </a>
+                            <button type="button" class="btn btn-success btn-lm btn-block" role="button"
+                                routerLink='/inscripcion-instituciones'>
+                                Anotarme
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-group list-group-flush mt-2" *ngIf="tipoDeCliente == 'Personas'">
+            <li class="list-group-item">
+                <div class="media">
+                    <img src="..." class="mr-3" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Marcos formativos</h5>
+
+                        <p>Capacitaciones para consumidor final</p>
+                        <p>
+                            <strong>Precio: $3000 (grupal)</strong>
+                        </p>
+                        <div class="accordion" id="accordionExample">
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Resumen
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            El curso Programación Inicial para consumidores finales está basada en la
+                                            adquisición de conocimientos básico de la programación general haciendo foco
+                                            en la lógica computacional y los primeros saberes que toda persona debería
+                                            tener para poder aplicarlo a la robótica.
+                                        </p>
+                                        <p>
+                                            Si nunca ha tenido conocimientos previos de programación y no sabe por donde
+                                            empezar, éste es el curso ideal. Aprenderá, de forma lúdica, varios
+                                            conceptos fundamentales que son necesarios para programar cualquier robot.
+                                            Ideal tanto para niños como para adultos que recién comienzan en el mundo de
+                                            la programación
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#temario" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Temario
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="temario" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Módulo 1 - Introducción a la Lógica</li>
+                                            <li>Módulo 2 - Pprogramación</li>
+                                            <li>Módulo 3 - mBlock</li>
+                                            <li>Módulo 4 - Robótica</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#formaDePago" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Formas de pago
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="formaDePago" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#formaDePago">
+                                    <div class="card-body">
+                                        <p>Depósito / Transferencia bancaria</p>
+                                        <p>Tarjeta de débito y crédito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_inicial_-_Consumidor_Final.pdf'
+                                target='_blank'>
+                                Ver presentación
+                            </a>
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button" data-toggle="modal"
+                                data-target="#exampleModal" href='https://forms.gle/8yfnYboXTk2tmKaA7' target="_blank">
+                                Anotarme
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--
+
+<app-toolbar></app-toolbar>
+<div class="container" *ngIf="tipoDeCliente.length == 0">
+    <div class="display-4 mt-5 mb-5">Elija el tipo de acceso</div>
+    <div class="card-deck mt-5">
+        <div class="card btn btn-light" ><--(click)="tipoDeCliente = 'Instituciones'"--
+            <img src="../../../../assets/image-training/training-001.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Instituciones</h5>
+                <p class="card-text">Capacitación al personal de la institución.</p>
+            </div>
+        </div>
+        <div class="card btn btn-light" (click)="tipoDeCliente = 'Personas'">
+            <img src="../../../../assets/image-training/training-002.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Persona</h5>
+                <p class="card-text">Capacitación a consumidores finales.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="tipoDeCliente.length > 0">
+    <div class="btn" (click)="tipoDeCliente = ''">
+        <img src="../../../../assets/icons/svg/chevron-left.svg" height="20px" width="20px" alt="" srcset="">
+        Atrás
+    </div>
+    <div class="card card-body mt-4 mb-4">
+        <div class="h2 mb-2">Capacitaciones para {{tipoDeCliente}}</div>
+        <ul class="list-group list-group-flush mt-2" *ngIf="tipoDeCliente == 'Instituciones'">
+            <li class="list-group-item">
+                <div class="media">
+                    <img src="..." class="mr-3" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Marcos formativos</h5>
+
+                        <p>Programación y Robótica para Instituciones Educativas</p>
+                        <p>
+                            <strong>Precio: $5000 por persona (grupal de 4 a 10 personas)</strong>
+                        </p>
+                        <div class="accordion" id="accordionExample">
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Resumen
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Desarrollado para aplicar los conceptos obtenidos, en este trayecto, rápidamente
+                                        en sus aulas de manera presencial como también la remota.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#temario" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Temario
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="temario" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Módulo 1 - Introducción a la Lógica, la programación y la robótica</li>
+                                            <li>Módulo 2 - Lenguajes de programación</li>
+                                            <li>Módulo 3 - Robótica</li>
+                                            <li>Módulo 4 - Robótica aplicada</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#formaDePago" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Formas de pago
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="formaDePago" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#formaDePago">
+                                    <div class="card-body">
+                                        <p>Depósito / Transferencia bancaria</p>
+                                        <p>Tarjeta de débito y crédito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_y_Robotica_-_Instituciones_Educativas.pdf'
+                                target='_blank'>
+                                Ver presentación
+                            </a>
+                            <button type="button" class="btn btn-success btn-lm btn-block" role="button"
+                                routerLink='/inscripcion-instituciones'>
+                                Anotarme
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-group list-group-flush mt-2" *ngIf="tipoDeCliente == 'Personas'">
+            <li class="list-group-item">
+                <div class="media">
+                    <img src="..." class="mr-3" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Marcos formativos</h5>
+
+                        <p>Capacitaciones para consumidor final</p>
+                        <p>
+                            <strong>Precio: $3000 (grupal)</strong>
+                        </p>
+                        <div class="accordion" id="accordionExample">
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Resumen
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>
+                                            El curso Programación Inicial para consumidores finales está basada en la
+                                            adquisición de conocimientos básico de la programación general haciendo foco
+                                            en la lógica computacional y los primeros saberes que toda persona debería
+                                            tener para poder aplicarlo a la robótica.
+                                        </p>
+                                        <p>
+                                            Si nunca ha tenido conocimientos previos de programación y no sabe por donde
+                                            empezar, éste es el curso ideal. Aprenderá, de forma lúdica, varios
+                                            conceptos fundamentales que son necesarios para programar cualquier robot.
+                                            Ideal tanto para niños como para adultos que recién comienzan en el mundo de
+                                            la programación
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#temario" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Temario
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="temario" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <ul>
+                                            <li>Módulo 1 - Introducción a la Lógica</li>
+                                            <li>Módulo 2 - Pprogramación</li>
+                                            <li>Módulo 3 - mBlock</li>
+                                            <li>Módulo 4 - Robótica</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#formaDePago" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Formas de pago
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="formaDePago" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#formaDePago">
+                                    <div class="card-body">
+                                        <p>Depósito / Transferencia bancaria</p>
+                                        <p>Tarjeta de débito y crédito</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3">
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                                href='http://www.misladrillos.com/images/educacion/capacitaciones/Programacion_inicial_-_Consumidor_Final.pdf'
+                                target='_blank'>
+                                Ver presentación
+                            </a>
+                            <a type="button" class="btn btn-primary btn-lm btn-block" role="button" data-toggle="modal"
+                                data-target="#exampleModal" href='https://forms.gle/8yfnYboXTk2tmKaA7' target="_blank">
+                                Anotarme
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+ -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contáctenos via WhatsApp</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Contactenos para obtener mas informacion acerca de las inscripciones de las capacitaciones.</p>
+                <p>
+                    <button class="btn btn-primary btn-block"
+                        onclick="window.open('https://wa.me/5491151506825')">Iniciar conversación</button>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

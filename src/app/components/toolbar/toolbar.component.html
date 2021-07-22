@@ -1,0 +1,40 @@
+<style>
+    .med-nav-text > a {
+        font-weight: 520;
+    }
+</style>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light coso">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="../../../assets/logo-ml-500px-transparente.png" width="80" height="38" alt="" loading="lazy">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="http://www.misladrillos.com" *ngIf="false">Inicio</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item med-nav-text">
+                    <a class="nav-link" routerLink="/" [ngClass]="{'active': paginaActual == 'home'}">Inicio</a>
+                </li>
+                <li class="nav-item med-nav-text" [ngClass]="{'active': paginaActual == 'robotics'}">
+                    <a class="nav-link" routerLink="/robotics">Kits educativos</a>
+                </li>
+                <li class="nav-item med-nav-text" hidden>
+                    <a class="nav-link" routerLink="/educational-institutions">Instituciones</a>
+                </li>
+                <li class="nav-item med-nav-text" [ngClass]="{'active': paginaActual == 'training'}">
+                    <a class="nav-link" routerLink="/training">Capacitaciones</a>
+                </li>
+                <li class="nav-item med-nav-text" [ngClass]="{'active': paginaActual == 'first-steps'}">
+                    <a class="nav-link" routerLink="/first-steps">Asistente</a>
+                </li>
+                <li class="nav-item med-nav-text" [ngClass]="{'active': paginaActual == 'support'}">
+                    <a class="nav-link" routerLink="/support">Soporte</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

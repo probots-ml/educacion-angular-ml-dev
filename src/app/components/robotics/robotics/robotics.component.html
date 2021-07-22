@@ -1,0 +1,428 @@
+<!---->
+
+<style>
+    .med-table-name {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .med-table-name>div {
+        background-color: rgba(255, 255, 255, 0.8);
+        height: max-content;
+        font-weight: 650;
+        text-align: center;
+    }
+</style>
+
+<app-toolbar [paginaActual]="paginaActual"></app-toolbar>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 h2 mt-3">Kits educativos</div>
+    </div>
+    <div class="row my-3 text-center border d-none d-md-flex">
+        <div class="col-md-2 py-2 offset-md-2">
+            Kit
+        </div>
+        <div class="col-md-1 py-2">
+            Nivel
+        </div>
+        <div class="col-md-1 py-2">
+            Bluetooth
+        </div>
+        <div class="col-md-1 py-2">
+            Perifericos
+        </div>
+        <div class="col-md-1 py-2">
+            Detalles
+
+        </div>
+        <div class="col-md-1 py-2">
+            Actividades
+
+        </div>
+        <div class="col-md-1 py-2">
+            Comprar
+
+        </div>
+    </div>
+    <div class="row my-3 text-center border" *ngFor="let producto of productos">
+        <div class="col-md-2 py-2 offset-md-2 border">
+            {{producto.nombre}}
+        </div>
+        <div class="col-md-1 py-2">
+            <div class="d-block d-md-none">Nivel: {{producto.nivel}}</div>
+            <div class="d-none d-md-block">{{producto.nivel}} </div>
+        </div>
+        <div class="col-md-1 py-2">
+            <div class="d-block d-md-none">Bluetooth: {{producto.bluetooth}}</div>
+            <div class="d-none d-md-block">{{producto.bluetooth}} </div>
+        </div>
+        <div class="col-md-1 py-2">
+            <div class="d-block d-md-none">Perifericos: {{producto.perifericos}}</div>
+            <div class="d-none d-md-block">{{producto.perifericos}} </div>
+        </div>
+        <div class="col-md-1 py-2">
+            <button type="button" class="btn btn-primary btn-sm" role="button" (click)="detallesProducto(producto.id)" data-toggle="modal" data-target="#detallesModal">
+                <div class="d-block d-md-none">Detalles</div>
+                <div class="d-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-plus" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <div class="col-md-1 py-2">
+            <button type="button" class="btn btn-warning btn-sm" role="button" (click)="actividadesProducto(producto.id)" *ngIf="producto.actividades.length != 0">
+                <div class="d-block d-md-none">Actividades</div>
+                <div class="d-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                        <path fill-rule="evenodd"
+                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                    </svg>
+                </div>
+            </button>
+        </div>
+        <div class="col-md-1 py-2">
+            <a type="button" class="btn btn-success btn-sm"
+                href="{{producto.producto}}" target="_blank">
+                <div class="d-block d-md-none">Comprar</div>
+                <div class="d-none d-md-block">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path
+                            d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                        <path
+                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!---->
+
+<div class="container" hidden>
+    <div class="display-4 mt-5">Kits de Robótica Educativa</div>
+    <div class="mt-5">
+        <div class="card-deck">
+            <div class="card">
+                <img src="../../../../assets/images-robotics/kinderbot/kinderbot-001.jpg" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kinderbot</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Inicial</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 100</li>
+                        <li class="list-group-item bg-transparent">Motor: 2 (incorporados)</li>
+                        <li class="list-group-item bg-transparent">Bluetooth: Opcional</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 1</li>
+                        <li class="list-group-item bg-transparent">Presentación: Cajas y estuche</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                        routerLink="/kinderbot">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button"
+                        routerLink="/kinderbot">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/449/?opcion=a7v63" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r500/r500-002..png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-500</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Inicial</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Motores: 2</li>
+                        <li class="list-group-item bg-transparent">Bluetooth: No</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 3</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button" routerLink="/r500">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button" routerLink="/r500">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/375/?opcion=a11v59" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r501/r501-001.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-501</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Primaria</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 9</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button" routerLink="/r501">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button" routerLink="/r501">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="  " target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r502/r502-001.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-502</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Primaria</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 10</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button" routerLink="/r502">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button" routerLink="/r502">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/379/?opcion=a11v59" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r503/r503-001.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-503</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Secundario</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 13</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button" routerLink="/r503">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button" routerLink="/r503">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/403/?opcion=a11v59" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r503-agro/r503-agro-001.jpeg" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-503 Agro</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Secundaria</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 21</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                        routerLink="/r503-agro">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button"
+                        routerLink="/r503-agro">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/395/?opcion=a11v59" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-deck mt-5">
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r503-industria/r503-industria-001.jpeg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-503 Industria</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Secundario</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 18</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button"
+                        routerLink="/r503-industria">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button"
+                        routerLink="/r503-industria">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/producto/397/?opcion=a11v59" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../../../../assets/images-robotics/r504/r504-002.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">R-504</h5>
+                    <p class="card-text">
+                        Kit con piezas metálicas para construcciones más fuertes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent"></li>
+                        <li class="list-group-item bg-transparent">Nivel recomendado: Secundaria</li>
+                        <li class="list-group-item bg-transparent">Piezas de armado: 500</li>
+                        <li class="list-group-item bg-transparent">Plataforma: mBlock</li>
+                        <li class="list-group-item bg-transparent">Periféricos: 18</li>
+                        <li class="list-group-item bg-transparent">Presentación: Caja</li>
+                        <li class="list-group-item bg-transparent"></li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-lm btn-block" role="button" data-toggle="modal"
+                        data-target="#exampleModal">
+                        Más detalles
+                    </button>
+                    <button type="button" class="btn btn-warning btn-lm btn-block" role="button" data-toggle="modal"
+                        data-target="#exampleModal">
+                        Actividades
+                    </button>
+                    <a type="button" class="btn btn-success btn-lm btn-block"
+                        href="http://tiendamisladrillos.com.ar/#!/" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div #detallesModal class="modal fade" id="detallesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{productoModal.nombre}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="{{productoModal.imagen}}" class="img-fluid" alt="imagen de {{productoModal.nombre}}">
+                <div class="row my-3 col-md-12 text-justify mx-auto">
+                    {{productoModal.descripcion}}
+                </div>
+                <div class="row border col-md-10 offset-md-1">
+                    Nivel recomendado: {{productoModal.nivel}}
+                </div>
+                <div class="row border col-md-10 offset-md-1">
+                    Cantidad de piezas del kit: {{productoModal.piezas}}
+                </div>
+                <div class="row border col-md-10 offset-md-1">
+                    Cantidad de periféricos: {{productoModal.perifericos}}
+                </div>
+                <div class="row border col-md-10 offset-md-1">
+                    Plataforma de programación: {{productoModal.plataforma}}
+                </div>
+                <div class="row border col-md-10 offset-md-1">
+                    Bluetooth: {{productoModal.bluetooth}}
+                </div>
+                <div class="row col-md-10 offset-md-1 mt-3" *ngIf="productoModal.actividades.length != 0">
+                    <a type="button" class="btn btn-warning col-md-12"
+                        href="{{productoModal.actividades}}" target="_blank">
+                        Actividades
+                    </a>
+                </div>
+                <div class="row col-md-10 offset-md-1 mt-2">
+                    <a type="button" class="btn btn-success col-md-12"
+                        href="{{productoModal.producto}}" target="_blank">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

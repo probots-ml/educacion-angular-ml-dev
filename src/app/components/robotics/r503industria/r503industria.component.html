@@ -1,0 +1,176 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+    <div class="display-4 mt-5">R-503 Industria</div>
+
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Detalle
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    El R-503 Industria.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Contenido del kit
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul>
+                        <li style="list-style: none;">Bloque lógico: <strong>Core R8+.</strong> Ítems incorporados al
+                            Core R8+:
+                            <ul>
+                                <li style="list-style: none;">Receptor infrarrojo</li>
+                                <li style="list-style: none;">Buzzer</li>
+                            </ul>
+                        </li>
+                        <li style="list-style: none;">Energía: <strong>Batería o porta pilas (a elección)</strong></li>
+                        <li style="list-style: none;">Motores: <strong>2</strong></li>
+                        <li style="list-style: none;">Control remoto: <strong>Si</strong></li>
+                        <li style="list-style: none;">Piezas estructurales: <strong>Si</strong></li>
+                        <li style="list-style: none;">Cantidad de piezas: <strong>500</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Sobre los componentes
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    Core R8 <span>
+                        <button class="btn btn-info"
+                            (click)='abrir("http://www.misladrillos.com/images/educacion/programas/manuales/Manual_R8.pdf")'>Ver
+                            detalle</button>
+                    </span>
+                </div>
+                <div class="card-body">
+                    Core R8+ <span>
+                        <button class="btn btn-info"
+                            (click)='abrir("http://www.misladrillos.com/images/educacion/programas/manuales/Manual_R8+.pdf")'>Ver
+                            detalle</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Actividades
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="accordion" id="accordionActividades">
+                        <div class="card">
+                            <div class="card-header" id="headingActividad1">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#actividad1" aria-expanded="false"
+                                        aria-controls="actividad1">
+                                        Actividad 1
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="actividad1" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionActividades">
+                                <div class="card-body">
+
+
+                                    <div class="accordion" id="accordionDetalleActividad1">
+                                        <div class="card">
+                                            <div class="card-header" id="headingDetalleActividad1">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#detalle1"
+                                                        aria-expanded="false" aria-controls="detalle1">
+                                                        Objetivo
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="detalle1" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionDetalleActividad1">
+                                                <div class="card-body">
+                                                    <p>
+                                                        Encender y apagar el led interno de color rojo
+                                                    </p>
+                                                    <button class="btn btn-info">Ver objetivo en video</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingDetalleActividad1">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#detalle2"
+                                                        aria-expanded="false" aria-controls="detalle2">
+                                                        Armado
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="detalle2" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionDetalleActividad1">
+                                                <div class="card-body">
+                                                    <p>
+                                                        Conectar el Led al conector 1 del <strong>Core R8+</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header" id="headingDetalleActividad1">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-link btn-block text-left collapsed"
+                                                        type="button" data-toggle="collapse" data-target="#detalle3"
+                                                        aria-expanded="false" aria-controls="detalle3">
+                                                        Proyecto - Programación
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="detalle3" class="collapse" aria-labelledby="headingThree"
+                                                data-parent="#accordionDetalleActividad1">
+                                                <div class="card-body">
+                                                    <p>
+                                                        En el siguiente link podrá descargar el proyecto para importarlo
+                                                        desde el mBlock
+                                                    </p>
+                                                    <button class="btn btn-info">Descargar el proyecto para
+                                                        mBlock</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
